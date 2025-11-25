@@ -1070,6 +1070,7 @@ p {
     height: 70vh;
     min-height: 400px;
     padding: var(--spacing-md);
+    padding-top: 80px;
   }
 
   .hero h1 {
