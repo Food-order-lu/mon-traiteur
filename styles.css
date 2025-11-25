@@ -826,9 +826,16 @@ p {
 }
 
 .advantage-icon {
-  font-size: 4rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
   display: block;
+}
+
+.advantage-icon-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--spacing-md);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .advantage-card h3 {

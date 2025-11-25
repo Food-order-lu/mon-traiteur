@@ -209,24 +209,29 @@ function createHomePage() {
                 ),
                 createElement('div', { className: 'advantages-grid' },
                     createElement('div', { className: 'advantage-card fade-in-up' },
-                        createElement('div', { className: 'advantage-icon' }, '🍽️'),
+                        createElement('img', { src: 'assets/icon-plat-chaud.png', alt: 'Qualité Premium', className: 'advantage-icon-img' }),
                         createElement('h3', {}, 'Qualité Premium'),
                         createElement('p', {}, "Ingrédients frais sélectionnés quotidiennement auprès de producteurs locaux. Nous garantissons une qualité irréprochable pour chaque prestation.")
                     ),
                     createElement('div', { className: 'advantage-card fade-in-up' },
-                        createElement('div', { className: 'advantage-icon' }, '👨‍🍳'),
+                        createElement('img', { src: 'assets/icon-chef.png', alt: 'Équipe Expérimentée', className: 'advantage-icon-img' }),
                         createElement('h3', {}, 'Équipe Expérimentée'),
                         createElement('p', {}, "Nos chefs et serveurs professionnels possèdent plus de 20 ans d'expérience dans la restauration haut de gamme et le service événementiel.")
                     ),
                     createElement('div', { className: 'advantage-card fade-in-up' },
-                        createElement('div', { className: 'advantage-icon' }, '✨'),
+                        createElement('img', { src: 'assets/icon-assiette.png', alt: 'Sur Mesure', className: 'advantage-icon-img' }),
                         createElement('h3', {}, 'Sur Mesure'),
                         createElement('p', {}, "Chaque menu est personnalisé selon vos goûts, vos besoins diététiques et le thème de votre événement. Flexibilité totale garantie.")
                     ),
                     createElement('div', { className: 'advantage-card fade-in-up' },
-                        createElement('div', { className: 'advantage-icon' }, '💰'),
-                        createElement('h3', {}, 'Prix Transparents'),
-                        createElement('p', {}, "Pas de frais cachés. Devis détaillé et transparent. Excellente rapport qualité-prix pour des services premium au Luxembourg.")
+                        createElement('img', { src: 'assets/icon-qualite.png', alt: 'Service Certifié', className: 'advantage-icon-img' }),
+                        createElement('h3', {}, 'Service Certifié'),
+                        createElement('p', {}, "Certifications et respect strict des normes d'hygiène et de sécurité alimentaire. Votre satisfaction est notre priorité absolue.")
+                    ),
+                    createElement('div', { className: 'advantage-card fade-in-up' },
+                        createElement('img', { src: 'assets/icon-livraison.png', alt: 'Livraison Soignée', className: 'advantage-icon-img' }),
+                        createElement('h3', {}, 'Livraison Soignée'),
+                        createElement('p', {}, "Livraison et installation complètes. Nos équipes gèrent tout de A à Z pour que vous puissiez profiter pleinement de votre événement.")
                     )
                 )
             )
