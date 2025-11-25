@@ -1067,18 +1067,55 @@ p {
   }
 
   .hero {
-    height: 80vh;
-    min-height: 500px;
+    height: 70vh;
+    min-height: 400px;
+    padding: var(--spacing-md);
+  }
+
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem !important;
   }
 
   .stats {
     margin-top: var(--spacing-md);
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .stat-card h3 {
+    font-size: 2rem !important;
+  }
+
+  .stat-card p {
+    font-size: 0.85rem !important;
+  }
+
+  /* Section titles */
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .section {
+    padding: var(--spacing-lg) 0 !important;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md) !important;
   }
 
   .satisfaction-grid,

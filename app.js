@@ -530,7 +530,7 @@ function createEventPage(config) {
                 createElement('div', { className: 'text-center mt-xl fade-in-up' },
                     createElement('h3', { className: 'mb-md' }, cta.title),
                     createElement('p', { className: 'mb-md' }, cta.text),
-                    createElement('a', { href: '#/contact', className: 'btn btn-primary' }, cta.button)
+                    createElement('a', { href: '#/devis', className: 'btn btn-primary' }, cta.button)
                 )
             )
         )
