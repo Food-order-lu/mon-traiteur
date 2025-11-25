@@ -372,7 +372,7 @@ function createHomePage() {
                     createElement('h2', {}, 'Prêt à organiser votre événement ?'),
                     createElement('p', {}, "Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé"),
                     createElement('div', { className: 'cta-buttons' },
-                        createElement('a', { href: '#/contact', className: 'btn btn-primary' }, 'Demander un Devis Gratuit'),
+                        createElement('a', { href: '#/devis', className: 'btn btn-primary' }, 'Demander un Devis Gratuit'),
                         createElement('a', { href: 'tel:+352691393199', className: 'btn btn-outline' }, '📞 +352 691 393 199')
                     )
                 )
