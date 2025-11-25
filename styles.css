@@ -123,6 +123,7 @@ p {
   text-decoration: none;
   font-weight: 700;
   transition: var(--transition-fast);
+  z-index: 1001;
 }
 
 .logo:hover {
@@ -163,21 +164,60 @@ p {
   width: 100%;
 }
 
+/* Compact Button Style */
+.btn-sm {
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.9rem !important;
+}
+
 /* Phone Link in Header */
 .phone-link {
   background: var(--accent-gold) !important;
   color: var(--text-dark) !important;
-  padding: 0.5rem 1rem !important;
+  padding: 0.4rem 0.8rem !important;
   border-radius: var(--radius-sm);
   font-weight: 600 !important;
   transition: var(--transition-fast) !important;
   text-decoration: none;
+  font-size: 0.9rem !important;
 }
 
 .phone-link:hover {
   background: var(--accent-gold-light) !important;
   transform: translateY(-2px) !important;
   box-shadow: var(--shadow-md) !important;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 3px;
+  transition: var(--transition-fast);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .phone-link::after {
@@ -979,22 +1019,51 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    padding-top: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+
+  /* Show hamburger button on mobile */
+  .hamburger {
+    display: flex;
   }
 
+  /* Mobile navigation */
   .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-sm);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px var(--spacing-lg) var(--spacing-lg);
+    gap: var(--spacing-lg);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
     width: 100%;
+    padding: var(--spacing-sm) 0;
+    font-size: 1.1rem;
+  }
+
+  .nav .phone-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav .btn-primary {
+    width: 100%;
+    text-align: center;
   }
 
   .logo {
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0;
   }
 
   .hero {

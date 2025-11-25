@@ -52,20 +52,55 @@ function createElement(tag, attributes = {}, ...children) {
 
 // Header Component
 function createHeader() {
-    return createElement('header', { className: 'header' },
+    const nav = createElement('nav', { className: 'nav', id: 'mainNav' },
+        createElement('a', { href: '#/' }, 'Accueil'),
+        createElement('a', { href: '#/services' }, 'Services'),
+        createElement('a', { href: '#/contact' }, 'Contact'),
+        createElement('a', { href: 'tel:+352691393199', className: 'phone-link' },
+            '📞 +352 691 393 199'
+        ),
+        createElement('a', { href: '#/devis', className: 'btn btn-primary btn-sm' }, 'Obtenir un Devis')
+    );
+
+    const hamburger = createElement('button', {
+        className: 'hamburger',
+        id: 'hamburgerBtn',
+        'aria-label': 'Toggle menu'
+    },
+        createElement('span'),
+        createElement('span'),
+        createElement('span')
+    );
+
+    const header = createElement('header', { className: 'header' },
         createElement('div', { className: 'header-content' },
             createElement('a', { href: '#/', className: 'logo' }, 'Mon Traiteur'),
-            createElement('nav', { className: 'nav' },
-                createElement('a', { href: '#/' }, 'Accueil'),
-                createElement('a', { href: '#/services' }, 'Services'),
-                createElement('a', { href: '#/contact' }, 'Contact'),
-                createElement('a', { href: 'tel:+352691393199', className: 'phone-link' },
-                    '📞 +352 691 393 199'
-                ),
-                createElement('a', { href: '#/devis', className: 'btn btn-primary' }, 'Obtenir un Devis')
-            )
+            hamburger,
+            nav
         )
     );
+
+    // Toggle menu on hamburger click
+    setTimeout(() => {
+        const btn = document.getElementById('hamburgerBtn');
+        const navEl = document.getElementById('mainNav');
+        if (btn && navEl) {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+                navEl.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            navEl.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    btn.classList.remove('active');
+                    navEl.classList.remove('active');
+                });
+            });
+        }
+    }, 0);
+
+    return header;
 }
 
 // Footer Component
@@ -91,7 +126,7 @@ function createFooter() {
             )
         ),
         createElement('div', { className: 'footer-bottom' },
-            createElement('p', {}, '© 2025 Mon Traiteur Luxembourg. Tous droits réservés.')
+            createElement('p', {}, '© 2025 Mon Traiteur Luxembourg - Fait avec passion. Tous droits réservés.')
         )
     );
 }
