@@ -490,7 +490,6 @@ function createEventCard(href, imgSrc, imgAlt, title, description) {
         createElement('img', { src: imgSrc, alt: imgAlt, className: 'event-image' }),
         createElement('div', { className: 'event-content' },
             createElement('h3', { className: 'event-title' }, title),
-            createElement('p', { className: 'event-description' }, description),
             createElement('span', { className: 'event-link' }, 'En savoir plus')
         )
     );
